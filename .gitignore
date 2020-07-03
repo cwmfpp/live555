@@ -1,0 +1,177 @@
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# NOTE! Please use 'git ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Normal rules
+#
+.*
+*.o
+*.o.*
+*.a
+*.s
+*.ko
+*.so
+*.so.dbg
+*.mod.c
+#*.i
+*.lst
+*.symtypes
+*.order
+*.elf
+*.bin
+*.tar
+*.gz
+*.bz2
+*.lzma
+*.xz
+*.lz4
+*.lzo
+*.patch
+*.gcno
+*.ll
+modules.builtin
+Module.symvers
+*.dwo
+*.su
+*.c.[012]*.*
+
+#
+# Top-level generic files
+#
+/tags
+/TAGS
+/linux
+/vmlinux
+/vmlinux.32
+/vmlinux-gdb.py
+/vmlinuz
+/System.map
+/Module.markers
+
+#
+# Debian directory (make deb-pkg)
+#
+/debian/
+
+#
+# tar directory (make tar*-pkg)
+#
+/tar-install/
+
+#
+# git files that we don't want to ignore even if they are dot-files
+#
+!.gitignore
+!.mailmap
+!.cocciconfig
+
+#
+# Generated include files
+#
+include/config
+include/generated
+arch/*/include/generated
+
+# stgit generated dirs
+patches-*
+
+# quilt's files
+patches
+series
+
+# cscope files
+cscope.*
+ncscope.*
+
+# gnu global files
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
+# id-utils files
+ID
+
+*.orig
+*~
+\#*#
+
+#
+# Leavings from module signing
+#
+extra_certificates
+signing_key.pem
+signing_key.priv
+signing_key.x509
+x509.genkey
+
+# Kconfig presets
+all.config
+
+# Kdevelop4
+*.kdev4
+
+# fetched Android config fragments
+kernel/configs/android-*.cfg
+
+# gen Makefile 
+BasicUsageEnvironment/Makefile
+Makefile
+UsageEnvironment/Makefile
+groupsock/Makefile
+hlsProxy/Makefile
+liveMedia/Makefile
+mediaServer/Makefile
+proxyServer/Makefile
+testProgs/Makefile
+
+# tmp elf file
+BasicUsageEnvironment/libBasicUsageEnvironment.so.1.0.1
+UsageEnvironment/libUsageEnvironment.so.3.1.0
+groupsock/libgroupsock.so.8.2.4
+hlsProxy/live555HLSProxy
+liveMedia/libliveMedia.so.79.1.2
+mediaServer/live555MediaServer
+proxyServer/live555ProxyServer
+testProgs/MPEG2TransportStreamIndexer
+testProgs/mikeyParse
+testProgs/openRTSP
+testProgs/playSIP
+testProgs/registerRTSPStream
+testProgs/sapWatch
+testProgs/testAMRAudioStreamer
+testProgs/testDVVideoStreamer
+testProgs/testH264VideoStreamer
+testProgs/testH264VideoToHLSSegments
+testProgs/testH264VideoToTransportStream
+testProgs/testH265VideoStreamer
+testProgs/testH265VideoToTransportStream
+testProgs/testMKVSplitter
+testProgs/testMKVStreamer
+testProgs/testMP3Receiver
+testProgs/testMP3Streamer
+testProgs/testMPEG1or2AudioVideoStreamer
+testProgs/testMPEG1or2ProgramToTransportStream
+testProgs/testMPEG1or2Splitter
+testProgs/testMPEG1or2VideoReceiver
+testProgs/testMPEG1or2VideoStreamer
+testProgs/testMPEG2TransportReceiver
+testProgs/testMPEG2TransportStreamSplitter
+testProgs/testMPEG2TransportStreamTrickPlay
+testProgs/testMPEG2TransportStreamer
+testProgs/testMPEG4VideoStreamer
+testProgs/testOggStreamer
+testProgs/testOnDemandRTSPServer
+testProgs/testRTSPClient
+testProgs/testRelay
+testProgs/testReplicator
+testProgs/testWAVAudioStreamer
+testProgs/vobStreamer
+
+# make install, dir _install
+_install/
