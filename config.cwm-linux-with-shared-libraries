@@ -26,7 +26,7 @@ libgroupsock_LIB_SUFFIX=so.$(shell expr $(libgroupsock_VERSION_CURRENT) - $(libg
 
 CROSS_COMPILE?=		
 #CROSS_COMPILE?=		arm-linux-androideabi-
-COMPILE_OPTS =		$(INCLUDES) -I/usr/local/include -I. -O2 -DSOCKLEN_T=socklen_t -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64 -fPIC
+COMPILE_OPTS =		$(INCLUDES) -I/usr/local/include -I. -Os -DSOCKLEN_T=socklen_t -DNO_SSTREAM=1 -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64 -fPIC -DNO_OPENSSL=1
 C =			c
 C_COMPILER =		$(CROSS_COMPILE)gcc
 C_FLAGS =		$(COMPILE_OPTS) $(CPPFLAGS) $(CFLAGS)
@@ -43,6 +43,6 @@ LIB_SUFFIX =	 	$(SHORT_LIB_SUFFIX).$($(NAME)_VERSION_AGE).$($(NAME)_VERSION_REVI
 LIBRARY_LINK_OPTS =	-shared -Wl,-soname,$(NAME).$(SHORT_LIB_SUFFIX) $(LDFLAGS)
 LIBS_FOR_CONSOLE_APPLICATION = -lssl -lcrypto
 LIBS_FOR_GUI_APPLICATION =
-LIBS_FOR_LIVEMEDIA_LIB = -lssl -lcrypto
+#LIBS_FOR_LIVEMEDIA_LIB = -lssl -lcrypto
 EXE =
 INSTALL2 =		install_shared_libraries
